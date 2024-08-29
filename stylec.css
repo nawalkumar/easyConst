@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: black;
+    color:white;
+    display:flex;
+    height:80px;
+    align-items: center;
+}
+.cont{
+    background-color: ghostwhite;
+    color:black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:10px solid rgb(157, 153, 153);
+    border-radius: 21px;
+    height:100px;
+    margin: 12px;
+}
+
+.cont:hover{
+    background-color: aqua;
+    color:white;
+}
