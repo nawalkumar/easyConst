@@ -23,11 +23,11 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="bg-yellow-600 p-5 py-10 rounded-lg w-full mb-5 lg:mb-0 hover-grow transition-transform duration-300 ease-in-out">
            
-            <a href="quizschedule.php" class="p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">game play</a>
+            <a href="quizschedule.php" class="p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">Test your Knowledge</a>
         </div>
         <div class="bg-gray-600 p-5 rounded-lg w-full hover-grow transition-transform duration-300 ease-in-out">
             
-            <a href="" class="mr-2 p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">debate</a>
+            <a href="chat.php" class="mr-2 p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">debate</a>
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="bg-red-500 p-5 rounded-lg w-full mb-5 lg:mb-0 hover-grow transition-transform duration-300 ease-in-out">
            
-            <a href="" class="mr-2 p-3 rounded-lg no-underline bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600"> query chatbot</a>
+            <a href="chatbot.php" class="mr-2 p-3 rounded-lg no-underline bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600"> query chatbot</a>
         </div>
     </div>
 </div>

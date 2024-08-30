@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $correctAnswer = $questions[$questionNumber]['answer'];
 
     if ($selectedOption === $correctAnswer) {
-        $score += 5;
+        $score += 5; // Add 5 points for a correct answer
         $_SESSION['score'] = $score;
     } else {
-        $score += 0;
+        $score += 0; // No points for a wrong answer
         $_SESSION['score'] = $score;
     }
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $currentQuestion = $questions[$questionNumber];
-shuffle($currentQuestion['options']);
+shuffle($currentQuestion['options']); // Shuffle the options
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +43,12 @@ shuffle($currentQuestion['options']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz on Fundamental Rights</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <div class="quiz-container">
-        <h1 class="quiz-title">Test Your Knowledge: Fundamental Rights</h1>
+    <div  class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <h1 class=" quiz-title my-20 color-gray-600 text-3xl mb-3 text-center md:text-center">Quiz</h1>
         <form id="quizForm" method="post">
             <p class="question"><?php echo $currentQuestion['question']; ?></p>
             <?php foreach ($currentQuestion['options'] as $option): ?>
@@ -57,8 +57,8 @@ shuffle($currentQuestion['options']);
                     <label for="<?php echo $option; ?>"><?php echo $option; ?></label>
                 </div>
             <?php endforeach; ?>
-            <button type="button" onclick="checkAnswer()" class="submit-button">Submit</button>
-            <button type="button" onclick="exitQuiz()" class="exit-button">Exit</button>
+            <button type="button" onclick="checkAnswer()" class="submit-button bg-green-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center ">Submit</button>
+            <button type="button" onclick="exitQuiz()" class="exit-button bg-red-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center ">Exit</button>
         </form>
         <div id="feedback" class="feedback"></div>
     </div>
@@ -77,7 +77,7 @@ shuffle($currentQuestion['options']);
                 selectedOption.parentElement.style.backgroundColor = '#d4edda';
                 setTimeout(() => {
                     document.getElementById('quizForm').submit();
-                }, 1000);
+                }, 1000); // Delay for animation
             } else {
                 feedback.innerHTML = 'Incorrect!';
                 feedback.style.color = 'red';
@@ -87,11 +87,12 @@ shuffle($currentQuestion['options']);
                 selectedOption.nextElementSibling.style.color = 'red';
                 setTimeout(() => {
                     document.getElementById('quizForm').submit();
-                }, 1000);
+                }, 1000); // Delay for animation
             }
         }
 
         function exitQuiz() {
+            // Navigate to the previous page
             window.history.back();
         }
     </script>

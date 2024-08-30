@@ -1,0 +1,13 @@
+
+iframe.bpFab{
+    left:50%;
+    top:50%;
+}
+iframe.bpOpen{
+    left:25%;
+    top:10%;
+}
+body{
+    /* background-image: url('gyanmurthi.jpg'); */
+    background-size: fill;
+}

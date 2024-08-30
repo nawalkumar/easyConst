@@ -60,6 +60,7 @@ include 'db.php';
         }
 </style>
      <link rel="stylesheet" href="include/assets/quiz.css" >
+     <link rel="stylesheet" href="include/assets/chat.css" >
      <!-- <link rel="stylesheet" href="include/assets/news.css" > -->
 </head>
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
