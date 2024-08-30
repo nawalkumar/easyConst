@@ -15,7 +15,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    text-align: center;
+    
 }
 
 .quiz-title {
@@ -45,7 +45,17 @@ body {
 .submit-button {
     padding: 10px 20px;
     background-color: #4CAF50;
-    color: black;
+    color:white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.exit-button{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color:white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -56,6 +66,10 @@ body {
 .submit-button:hover {
     background-color: #45a049;
 }
+.exit-button:hover {
+    background-color: #cc1717;
+}
+
 
 .feedback {
     font-size: 18px;

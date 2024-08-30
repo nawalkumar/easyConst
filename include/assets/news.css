@@ -14,12 +14,12 @@ body {
 
 .news-blocks {
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: center;
 }
 
 .news-block {
-    width: 300px;
+    width: 700px;
     margin: 20px;
     padding: 20px;
     background-color: rgb(255, 248, 232);

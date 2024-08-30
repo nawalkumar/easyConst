@@ -52,8 +52,8 @@ shuffle($currentQuestion['options']); // Shuffle the options
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="quiz-container">
-        <h1 class="quiz-title">Quiz</h1>
+    <div  class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <h1 class=" quiz-title my-20 color-gray-600 text-3xl mb-3 text-center md:text-center">Quiz</h1>
         <form id="quizForm" method="post">
             <p class="question"><?php echo $currentQuestion['question']; ?></p>
             <?php foreach ($currentQuestion['options'] as $option): ?>
@@ -62,7 +62,8 @@ shuffle($currentQuestion['options']); // Shuffle the options
                     <label for="<?php echo $option; ?>"><?php echo $option; ?></label>
                 </div>
             <?php endforeach; ?>
-            <button type="button" onclick="checkAnswer()" class="submit-button">Submit</button>
+            <button type="button" onclick="checkAnswer()" class="submit-button bg-green-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center ">Submit</button>
+            <button type="button" onclick="exitQuiz()" class="exit-button bg-red-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center ">Exit</button>
         </form>
         <div id="feedback" class="feedback"></div>
     </div>
@@ -93,6 +94,11 @@ shuffle($currentQuestion['options']); // Shuffle the options
                     document.getElementById('quizForm').submit();
                 }, 1000); // Delay for animation
             }
+        }
+
+        function exitQuiz() {
+            // Navigate to the previous page
+            window.history.back();
         }
     </script>
 </body>

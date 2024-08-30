@@ -1,14 +1,12 @@
 <?php
-include 'include/header.php';
+    include 'include/header.php'
 ?>
-    <div id="contect" class="news-container">
-        <h1 style="color: rgb(170, 179, 150);">Latest News</h1>
-        <div class="news-blocks">
-        </div>
-    </div>
 
+<div class="news-block p-5 mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto mb-16 break-words" id="content">
+    <!-- Individual news items will be dynamically added here -->
+     
+</div>
 
-    <script src="include/assets/news.js"></script>
-<?php
-include 'include/footer.php';
-?>
+<script src="include/assets/news.js"></script>
+</body>
+</html>

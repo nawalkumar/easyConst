@@ -60,11 +60,11 @@ include 'db.php';
         }
 </style>
      <link rel="stylesheet" href="include/assets/quiz.css" >
-     <link rel="stylesheet" href="include/assets/news.css" >
+     <!-- <link rel="stylesheet" href="include/assets/news.css" > -->
 </head>
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
     <script src=include/assets/tailwind.js></script>
-    <div class=" bg-green-900 w-full text-white flex items-center justify-between h-16 max-w-full break-words">
+    <div class=" bg-gray-600 w-full text-white flex items-center justify-between h-16 max-w-full break-words">
         <h1 class="ml-5 mb-4 text-3xl font-bold">easyConst</h1>
         <nav>
             <?php if (!isset($_SESSION['user_id'])): ?>

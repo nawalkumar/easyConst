@@ -10,7 +10,7 @@
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
-    <a href="" class="ml-5 mb-4 text-3xl font-bold text-center md:text-center"> Part III: Fundamental Rights (Articles 12-35)</a>
+    <a href="a1920.php" class="ml-5 mb-4 text-3xl font-bold text-center md:text-center"> Part III: Fundamental Rights (Articles 12-35)</a>
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
@@ -54,7 +54,7 @@
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
-    <a class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XII: Finance, Property, Contracts, and Suits (Articles 264-300A)</a>
+    <a href="a300a.php"  class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XII: Finance, Property, Contracts, and Suits (Articles 264-300A)</a>
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
@@ -84,11 +84,11 @@
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
-    <a class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XIX: Miscellaneous (Articles 361-367)</a>
+    <a href="" class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XIX: Miscellaneous (Articles 361-367)</a>
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
-    <a class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XX: Amendment of the Constitution (Article 368)</a>
+    <a  href="" class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Part XX: Amendment of the Constitution (Article 368)</a>
    
 </div>
 <div class="p-5  mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto  mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
