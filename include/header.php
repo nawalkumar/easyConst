@@ -9,8 +9,7 @@ include 'db.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>easyConst</title>
-     <!-- <link rel="stylesheet" href="include/assets/style1.css"> -->
-      <!-- <link rel="stylesheet" href="stylegrid.css"> -->
+     
      <style>
             @keyframes bg-color-change {
             0% {
@@ -64,7 +63,7 @@ include 'db.php';
 </head>
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
     <script src=include/assets/tailwind.js></script>
-    <div class=" header w-full text-white flex items-center justify-between h-16 max-w-full break-words">
+    <div class=" bg-green-900 w-full text-white flex items-center justify-between h-16 max-w-full break-words">
         <h1 class="ml-5 mb-4 text-3xl font-bold">easyConst</h1>
         <nav>
             <?php if (!isset($_SESSION['user_id'])): ?>
