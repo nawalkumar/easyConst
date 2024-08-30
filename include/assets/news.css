@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgb(247, 238, 211);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-block {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(255, 248, 232);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-block h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.news-block p {
+    font-size: 14px;
+    color: rgb(103, 70, 54);
+}

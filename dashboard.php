@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="bg-gray-600 p-5 rounded-lg w-full hover-grow transition-transform duration-300 ease-in-out">
             
-            <a href="" class="mr-2 p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">explore recent event</a>
+            <a href="news.php" class="mr-2 p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">explore recent event</a>
         </div>
         <div class="bg-red-500 p-5 rounded-lg w-full mb-5 lg:mb-0 hover-grow transition-transform duration-300 ease-in-out">
            

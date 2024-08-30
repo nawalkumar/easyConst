@@ -59,7 +59,8 @@ include 'db.php';
             }
         }
 </style>
-     <link rel="stylesheet" href="include/assets/styles.css" >
+     <link rel="stylesheet" href="include/assets/quiz.css" >
+     <link rel="stylesheet" href="include/assets/news.css" >
 </head>
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
     <script src=include/assets/tailwind.js></script>
@@ -76,3 +77,4 @@ include 'db.php';
             <?php endif; ?>
         </nav>
     </div>
+    <!-- <script src="include/assets/news.js"></script> -->
