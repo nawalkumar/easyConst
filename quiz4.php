@@ -16,6 +16,7 @@ $questions = [
 
 $questionNumber = isset($_SESSION['questionNumber']) ? $_SESSION['questionNumber'] : 1;
 $score = isset($_SESSION['score']) ? $_SESSION['score'] : 0;
+$user_id = $_SESSION['user_id']; // Assuming user ID is stored in session
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $selectedOption = $_POST['option'];
@@ -24,19 +25,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($selectedOption === $correctAnswer) {
         $score += 5; // Add 5 points for a correct answer
         $_SESSION['score'] = $score;
-    } else {
-        $score += 0; // No points for a wrong answer
-        $_SESSION['score'] = $score;
     }
 
     $questionNumber++;
     $_SESSION['questionNumber'] = $questionNumber;
 
     if ($questionNumber > count($questions)) {
-        echo "<p class='end-message'>Congratulations! You have completed the quiz. Your score is: $score</p>";
-        session_destroy();
-        exit;
+        // Store the quiz score in the database
+        $quiz_title = 'Article 1 Quiz';
+        $stmt = $conn->prepare("INSERT INTO quiz_scores (user_id, quiz_title, score) VALUES (?, ?, ?)");
+        $stmt->bind_param("isi", $user_id, $quiz_title, $score);
+        $stmt->execute();
+        $stmt->close();
+
+        // Reset session variables
+        unset($_SESSION['questionNumber']);
+        unset($_SESSION['score']);
+
+        header('Location: leaderboard.php');
+        exit();
     }
+}
+
+if ($questionNumber > count($questions)) {
+    echo "<p class='end-message'>You have completed the quiz. Your final score is: $score</p>";
+    session_destroy();
+    exit;
 }
 
 $currentQuestion = $questions[$questionNumber];
@@ -48,12 +62,12 @@ shuffle($currentQuestion['options']); // Shuffle the options
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz on Article 300A</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <div class="quiz-container">
-        <h1 class="quiz-title">Quiz on Article 300A</h1>
+    <div class="p-5 mt-5 shadow-lg rounded-lg w-11/12 md:w-7/10 lg:w-4/5 mx-auto mb-16 break-words hover:transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <h1 class="quiz-title my-20 color-gray-600 text-3xl mb-3 text-center md:text-center">Quiz</h1>
         <form id="quizForm" method="post">
             <p class="question"><?php echo $currentQuestion['question']; ?></p>
             <?php foreach ($currentQuestion['options'] as $option): ?>
@@ -62,8 +76,8 @@ shuffle($currentQuestion['options']); // Shuffle the options
                     <label for="<?php echo $option; ?>"><?php echo $option; ?></label>
                 </div>
             <?php endforeach; ?>
-            <button type="button" onclick="checkAnswer()" class="submit-button">Submit</button>
-            <button type="button" onclick="exitQuiz()" class="exit-button">Exit</button>
+            <button type="button" onclick="checkAnswer()" class="submit-button bg-green-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center">Submit</button>
+            <button type="button" onclick="exitQuiz()" class="exit-button bg-red-600 color-white ml-5 rounded-lg p-2 mb-1 text-3xl font-bold text-center md:text-center">Exit</button>
         </form>
         <div id="feedback" class="feedback"></div>
     </div>

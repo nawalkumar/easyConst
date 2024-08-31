@@ -5,8 +5,8 @@
     <h1 class="ml-5 mb-4 text-3xl font-bold text-center md:text-center">Welcome to easyConst</h1>
     <p class="text-xl mb-3 text-center md:text-center">Learn constitution in your own language</p>
     <div class="flex justify-center md:justify-center">
-        <a href="signup.php" class="header text-white bg-blue-600 rounded-lg p-2 no-underline mr-5 font-bold hover:underline">Sign Up</a>
-        <a href="login.php" class="header text-white bg-green-600 rounded-lg p-2 ml-4 no-underline mr-5 font-bold hover:underline">Login</a>
+    <a href="signup.php" class="button text-white bg-green-600 rounded-lg p-2 ml-4 no-underline mr-5 font-bold hover:bg-blue-900">Signup</a>
+        <a href="login.php" class="button text-white bg-green-600 rounded-lg p-2 ml-4 no-underline mr-5 font-bold hover:bg-blue-900">Login</a>
     </div>
 </div>
 

@@ -32,8 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <a href="signup.php" class="text-black no-underline mr-5 font-bold hover:underline">Don't have an account? Sign Up</a>
 </div>
 <script>
-    document.body.style.backgroundImage="url('include/assets/par.jpg')";
-    //document.body.style.backgroundColor ="green";
+document.body.style.backgroundImage="url('include/assets/Con1.jpg')";
+document.body.style.backgroundPosition = "center";
+document.body.style.backgroundRepeat = "no-repeat";
 </script>
 <?php
  include 'include/footer.php'; 

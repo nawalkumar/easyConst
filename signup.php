@@ -52,7 +52,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 });
 </script>
 <script>
-    document.body.style.backgroundImage="url('include/assets/par.jpg')";
+    document.body.style.backgroundImage="url('include/assets/Con1.jpg')";
     //document.body.style.backgroundColor ="green";
 </script>
 <?php

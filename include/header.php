@@ -1,6 +1,13 @@
 <?php
     session_start();
     include 'db.php';
+    try {
+        // Initialize PDO connection
+        $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die('Database connection error: ' . $e->getMessage());
+    }
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +18,15 @@
     <title>easyConst</title>
      
      <style>
+        nav i.fas.fa-user-circle {
+            font-size: 1.5rem; /* Adjust the size */
+            color: white; /* Icon color */
+        }
+
+        nav a:hover i.fas.fa-user-circle {
+            color: #ffcc00; /* Change color on hover */
+        }
+
             @keyframes bg-color-change {
             0% {
                 background-color: #C3979F; 
@@ -61,6 +77,11 @@
 </style>
      <link rel="stylesheet" href="include/assets/quiz.css" >
      <link rel="stylesheet" href="include/assets/chat.css" >
+     
+    <!-- Other head content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Your other CSS and JS files -->
+
      <!-- <link rel="stylesheet" href="include/assets/news.css" > -->
 </head>
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
@@ -75,6 +96,9 @@
             <?php else: ?>
                 <a href="dashboard.php" class="text-white no-underline mr-5 font-bold hover:underline">Dashboard</a>
                 <a href="logout.php" class="text-white no-underline mr-5 font-bold hover:underline">Logout</a>
+                <a href="user_profile.php" class="text-white no-underline mr-5 font-bold hover:underline">
+            <i class="fas fa-user-circle"></i>
+        </a>
             <?php endif; ?>
         </nav>
     </div>
