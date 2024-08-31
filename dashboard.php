@@ -35,7 +35,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="flex flex-col lg:flex-row lg:gap-2 justify-around mb-5 text-center">
         <div class="bg-yellow-600 p-5 py-10 rounded-lg w-full mb-5 lg:mb-0 hover-grow transition-transform duration-300 ease-in-out">
            
-            <a href="" class="p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">discussion</a>
+            <a href="discuss.php" class="p-3 rounded-lg bg-red-400 mb-6 text-white bg-green-900 hover:bg-green-600">discussion</a>
         </div>
         <div class="bg-gray-600 p-5 rounded-lg w-full hover-grow transition-transform duration-300 ease-in-out">
             

@@ -1,6 +1,6 @@
 <?php
-session_start();
-include 'db.php';
+    session_start();
+    include 'db.php';
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +66,7 @@ include 'db.php';
 <body  class=" h-full font-roboto bg-gray-300 flex flex-col items-center m-0 text-center">
     <script src=include/assets/tailwind.js></script>
     <div class=" bg-gray-600 w-full text-white flex items-center justify-between h-16 max-w-full break-words">
-        <h1 class="ml-5 mb-4 text-3xl font-bold">easyConst</h1>
+        <img src="include/assets/logo.jpg" class="ml-5 mt-4 mb-4 text-3xl rounded-lg font-bold">
         <nav>
             <?php if (!isset($_SESSION['user_id'])): ?>
                 <a href="index.php" class="text-white no-underline mr-5 font-bold hover:underline">Home</a>
